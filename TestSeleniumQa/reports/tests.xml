@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="268.875206">
+<testcase classname="Shopping cart" name="Add most expensive or cheap item to the shopping cart" time="65.737862">
+<system-out><![CDATA[Given e-shop Datart site is open............................................passed
+When navigate to product category "Elektromobilita".........................passed
+When navigate to product 1st subcategory "Hoverboardy"......................passed
+When sort products by "PRICE_DESC"..........................................passed
+And I add one top item from the list to the shopping cart...................passed
+And navigate to shop cart...................................................passed
+Then check that cart contains items: "1"....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shopping cart" name="Add most expensive or cheap item to the shopping cart 2" time="52.32645">
+<system-out><![CDATA[Given e-shop Datart site is open............................................passed
+When navigate to product category "Elektromobilita".........................passed
+When navigate to product 1st subcategory "Hoverboardy"......................passed
+When sort products by "PRICE_ASC"...........................................passed
+And I add one top item from the list to the shopping cart...................passed
+And navigate to shop cart...................................................passed
+Then check that cart contains items: "1"....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shopping cart" name="Add most expensive or cheap item to the shopping cart 3" time="66.095429">
+<system-out><![CDATA[Given e-shop Datart site is open............................................passed
+When navigate to product category "Příslušenství"...........................passed
+When navigate to product 1st subcategory "Sluchátka"........................passed
+When sort products by "PRICE_ASC"...........................................passed
+And I add one top item from the list to the shopping cart...................passed
+And navigate to shop cart...................................................passed
+Then check that cart contains items: "1"....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shopping cart" name="Add most expensive or cheap item to the shopping cart 4" time="67.959223">
+<system-out><![CDATA[Given e-shop Datart site is open............................................passed
+When navigate to product category "Příslušenství"...........................passed
+When navigate to product 1st subcategory "Sluchátka"........................passed
+When sort products by "PRICE_DESC"..........................................passed
+And I add one top item from the list to the shopping cart...................passed
+And navigate to shop cart...................................................passed
+Then check that cart contains items: "1"....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shopping cart" name="Add most expensive or cheap item to the shopping cart 5" time="16.756242">
+<failure message="java.lang.AssertionError: Chek if we are at proper product category&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at cz.shop.qa.steps.gui.Actions.navigateToProductCategory(Actions.java:24)&#10;&#9;at ✽.navigate to product category &quot;Hobby a zahrada&quot;(classpath:cz/shop/qa/features/shopping_cart.feature:7)&#10;"><![CDATA[Given e-shop Mall site is open..............................................passed
+When navigate to product category "Hobby a zahrada".........................failed
+When navigate to product 1st subcategory "Čerpadla".........................skipped
+When sort products by "PRICE"...............................................skipped
+And I add one top item from the list to the shopping cart...................skipped
+And navigate to shop cart...................................................skipped
+Then check that cart contains items: "1"....................................skipped
+
+StackTrace:
+java.lang.AssertionError: Chek if we are at proper product category
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at cz.shop.qa.steps.gui.Actions.navigateToProductCategory(Actions.java:24)
+	at ✽.navigate to product category "Hobby a zahrada"(classpath:cz/shop/qa/features/shopping_cart.feature:7)
+]]></failure>
+</testcase>
+</testsuite>
